@@ -18,7 +18,7 @@ function App() {
           setGoals(res.table.rows);
       })},[]);
 
-      console.log(goals);
+      //console.log(goals);
 
       //Se usa "Set" para eliminar valores duplicados
       let unicos = [...new Set(goals.map(element => element.c[1].v))];
@@ -44,7 +44,11 @@ function App() {
     <>
     <h1>Money Goals</h1>
     <div className='container'>
-      {metas.map(goal => <Goal key={goal[0]} name={goal[0]} goal={goal[1]} progress={goal[2]}/>)}
+      {metas.map(goal => {
+        //return <Goal key={goal[0]} name={goal[0]} goal={goal[1]} progress={goal[2]}/>
+        //Usar el codigo de abajo para eliminar metas cumplidas
+        return Number(goal[2]) > Number(goal[1]) ? "" : <Goal key={goal[0]} name={goal[0]} goal={goal[1]} progress={goal[2]}/>;
+      })}
     </div>
     <button><a href={urlAdd}>+</a></button>
     </>
