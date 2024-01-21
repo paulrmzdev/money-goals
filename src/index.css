@@ -1,0 +1,95 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goal {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.progressContainer{
+  margin-bottom: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/*body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+*/
+h1 {
+  line-height: 1.1;
+}
+
+button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 3em;
+  background-color: #f6a908;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button:hover{
+  transform: scale(1.1);
+}
+
+
+
+.filler {
+  animation: animate 1.2s ease-out;
+  transition: 1s ease-out;
+  transform-origin: left;
+}
+
+.filler span {
+  opacity: 0;
+  animation: animateText 1s ease 1.2s forwards;
+  transition: 1s ease-out;
+  transform-origin: left;
+}
+
+@keyframes animate {
+  0%{margin-left: -100%;}
+  100% {margin-left: 0;}
+}
+
+@keyframes animateText {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
