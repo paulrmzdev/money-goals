@@ -69,27 +69,3 @@ button:hover{
   transform: scale(1.1);
 }
 
-
-
-.filler {
-  animation: animate 1.2s ease-out;
-  transition: 1s ease-out;
-  transform-origin: left;
-}
-
-.filler span {
-  opacity: 0;
-  animation: animateText 1s ease 1.2s forwards;
-  transition: 1s ease-out;
-  transform-origin: left;
-}
-
-@keyframes animate {
-  0%{margin-left: -100%;}
-  100% {margin-left: 0;}
-}
-
-@keyframes animateText {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
